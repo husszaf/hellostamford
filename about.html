@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="History about Stamford">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da5e22e76a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Hello Stamford</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+        <a href="/index.html"><img src="/assets/StamfordTown.webp" alt=""></a>
+        </div>
+        <ul class="nav" id="navi-list">
+            <li class="list-item"><a href="/plantrip.html">Plan trip</a></li>
+            <li class="list-item"><a href="/about.html">About Stamford</a></li>
+            <li class="list-item"><a href="/social.html">Social</a></li>
+            <li class="list-item"><a href="/contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+    <!-- Main Body -->
+<div class="main">
+    <div class="img2">
+        <h1 id="title">About Stamford</h1>
+    </div>
+    <!-- Weather -->
+    <div class="weather">
+        <h4>Stamford<i id="weather-icon" class="fa-solid fa-cloud-sun"></i>:<h4 id="weather-data"></h4></h4>
+    </div>
+    <!-- History -->
+    <div class="container">
+        <div class="col">
+            <!-- History Section-->
+            <div class="flexbox-container">
+                <div class="flexbox-item history">
+                <h1>History of Stamford</h1>
+                <p>
+                    Acknowledged as one of the most beautiful towns in England, Stamford is known to have been the scene of human activity for around 5000 years.
+
+                    Situated 90 miles north of London, on the route of the old Great North Road (A1) and now by-passed a mile to the west, it is an easy base for trips to the industrial Midlands, the North and rural East Anglia.
+
+                    The visitor cannot fail to be impressed by the fine stone buildings with their locally quarried Collyweston stone slate roofs. If the cars could be removed from the streets the scene has remained unchanged for a couple of centuries.
+                
+                    Industrial activity has contributed to the wellbeing of the Town, but it was the wool trade that formed the basis of great prosperity in the Middle Ages. A host of small trades were thriving in the 19c, malting, brewing, tanyards, soap-makers, terra cotta ware, bone crushers (for agricultural fertilizer), candle makers, millers, traders in coal, lime and timber, to mention but a few. Although most of these activities have disappeared, traces of them can be found in buildings and street names.
+
+                    And so the Stamford Notebook Company, an offshoot of the printing industry, making notebooks by hand, is adding to the long list of small enterprises that have kept the Town ticking over for centuries.
+
+                    In March 2013 Stamford was named by The Sunday Times as the best place to live in Britain. It is praised for wonderful architecture, good schools, shopping facilities and transport links. Stamford is largely a beautiful Georgian stone built town. It was voted runner up in 2017, and made the list again in 2019, with the Sunday Times calling Stamford, "Still the best looking Town in Britain."
+
+                    A quote from the supplement published by The Sunday Times said: “The ducks are quacking and the river sparkles in the spring sunshine. Across the green of Stamford’s famous water meadows, young families and couples enjoy the day, sipping takeaway coffees from the cosy independent cafes, such as the Fine Food Store, that line the gloriously Georgian high street’.
+
+                    ‘The architecture and honey-stone streets really are magnificent, but that’s not all Stamford has to recommend it; this friendly town offers good organic produce as well as designer boutiques.”
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer-->
+<footer><p>©Hello Stamford</p></footer>
+</body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
+
+    toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+    })
+</script>
+</html>

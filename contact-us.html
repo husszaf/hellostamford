@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact details for Stamford Council">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script src="https://kit.fontawesome.com/da5e22e76a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Social | Hello Stamford</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+        <a href="/index.html"><img src="/assets/StamfordTown.webp" alt=""></a>
+        </div>
+        <ul class="nav" id="navi-list">
+            <li class="list-item"><a href="/plantrip.html">Plan trip</a></li>
+            <li class="list-item"><a href="/about.html">About Stamford</a></li>
+            <li class="list-item"><a href="/social.html">Social</a></li>
+            <li class="list-item"><a href="/contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+    <!-- Main Body -->
+<div class="main">
+    <div class="img2">
+        <h1 id="title">Twitter</h1>
+    </div>
+    <!-- Weather -->
+    <div class="weather">
+        <h4>Stamford<i id="weather-icon" class="fa-solid fa-cloud-sun"></i>:<h4 id="weather-data"></h4></h4>
+    </div>
+    <h1 class="flexbox-container">Contact Us</h1>
+    <div class="flexbox-container">
+        <div class="flexbox-item">
+            <h2>Address</h2>
+            <h5>Stamford Town Council, The Town Hall, St Mary’s Hill, Stamford, Lincolnshire, PE9 2DR</h5>
+            <h2>Email</h2>
+            <h5>townhall@stamfordtowncouncil.gov.uk</h5>
+            <h2>Telephone</h2>
+            <h5>01780 753808</h5>
+        </div>      
+    </div>
+    
+</div>
+<!--Footer-->
+<footer><p>©Hello Stamford</p></footer>
+</body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
+
+    toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+    })
+</script>
+</html>

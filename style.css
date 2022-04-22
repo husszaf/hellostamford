@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: #e3ba81;
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Centre aligns the items*/
+    align-items: center; /* All the items in the navbar will be vertically aligned */
+    font-size: 18px;
+    padding: 5px; /* Space around the navbar items */
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover{
+    color: black;
+    background-color: white;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.logo img{
+    width: 7vh;
+}
+
+.logo img:hover{
+    cursor: pointer;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav .list-item{
+    display: inline-block;
+    padding: 1vh; /* Space around the nav link */
+}
+.menu{
+    display: none;
+}
+.menu-line{
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+body{
+    background-color: #faebd7;
+    right: 0px;
+    width: auto;
+}
+.img1{
+    background: url(assets/stamford2.avif);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Updock', cursive;
+    
+}
+.img2{
+    background: url(assets/stamford1.webp);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-family: 'Updock', cursive;
+}
+.weather{
+    background-color: #e3ba81;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    align-items: center; /* Horizontally Aligned inside the div*/
+}
+
+.weather h4{
+    margin-left: 2vh;
+}
+
+#places-h1{
+    text-align: center;
+    margin: 2% 0;
+}
+
+#lifestyle-h1{
+    text-align: center;
+    margin: 2% 0;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+}
+
+.icon{
+    width: 42%;
+    height: 50%;
+}
+
+.icon-2{
+    width: 60%;
+    height: 100%;
+}
+
+.flexbox-item h3{
+    padding: 5px;
+}
+
+.description{
+    align-items: center;
+    width: 250px;
+}
+
+.description p{
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+}
+
+.visit-btn{
+    background-color: #b86600;
+    width: 50%;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 4%;
+    color: white;
+    font-size: 22px;
+    font-family: 'Updock', cursive;
+}
+
+.open:hover{
+    cursor: pointer;
+    background-color: #df7a00;
+}
+
+.open{
+    background-color: #b86600;
+    width: 50%;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 5%;
+    color: white;
+    font-size: 22px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.events-table td{
+    text-align: center;
+}
+.events-table .open{
+    font-size: 18px;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+tr:nth-of-type(odd){
+    background-color: rgb(246, 246, 246);
+}
+
+.table th{
+    background: #b86600;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.table td, th{
+    border: 1px solid #b86600;
+    font-size: 16px;
+    font-family: 'Noto Sans Display', sans-serif;
+    padding: 6px;
+    max-width: 0 !important;
+}
+
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+
+
+  
+  
+  
+  
+  /* general styling */
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+  }
+
+
+.flexbox-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5%;
+}
+
+.flexbox-item{
+    /*
+    width: 200px;
+    margin: 10px;
+    border: 3px solid grey;
+    background-color: #dfdfdf;
+    */
+    width: 250px;
+    margin: 10px;
+    background-color: #e3ba81;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgb(0 0 0 / 50%);
+    text-align: center;
+}
+
+.flexbox-item1{
+    min-height: 300px;
+}
+
+.flexbox-item2{
+    min-height: 300px;
+}
+
+.flexbox-item3{
+    min-height: 300px;
+}
+
+.flexbox-item4{
+    display: none;
+}
+
+.h1-centre{
+    text-align: center;
+}
+
+footer {
+    height: 40px;
+    background-color: #b86600;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+  }
+
+
+@media all and (max-width: 809px){
+    /*
+    .flexbox-container{
+        /flex-direction: column;
+
+    }
+    */
+    
+    .flexbox-item4{
+        display: flex;
+        min-height: 300px;
+        width: 250px;
+        margin: 10px;
+        border: 3px solid #faebd7;
+        background-color: #faebd7;
+    }
+}
+
+.history{
+    width: 100%;
+}
+
+.history p{
+    padding: 4%;
+    text-align: left;
+}
+
+.events-table .open{
+    width: 80%;
+}
+
+@media all and (max-width: 467px){
+    .flexbox-item4{
+        display: none;
+    }
+    .events-table .open{
+        width: 90%;
+    }
+}
+
+
+
+@media all and (max-width: 576px){
+    .navbar{
+        flex-direction: column;
+        position: relative;
+        padding: 0px;
+    }
+    .menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 30px;
+    }
+
+    .nav .list-item{
+        display: block; /* Aligns each link in a new line*/
+        border-top: 1px solid white;
+        padding: 3vh;
+    }
+
+    .nav{
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+    }
+
+    .logo{
+        /*width: 100%; *//* Align the Logo to the left*/
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .active{
+        display: block;
+    }
+
+    /* Main body style from here*/
+
+    .img1{
+        background: url(assets/stamford2.avif);
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #title{
+        font-size: 40px;
+        font-family: 'Updock', cursive;
+        color: white;
+    }
+
+    .weather{
+        background-color: #e3ba81;
+        height: 35px;
+        font-size: 20px;
+        display: flex;
+        align-items: center; /* Horizontally Aligned inside the div*/
+    }
+
+    /*Events Table*/
+    
+
+}
+
+

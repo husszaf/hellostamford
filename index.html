@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Homepage">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da5e22e76a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon/apple-icon-180.png">
+    <link rel="apple-touch-icon-144" sizes="144x144" href="/icon/manifest-icon-144.png">
+    <meta name="theme-color" content="#b86600"/>
+    <title>Hello Stamford</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+        <img onclick="window.location.href='index.html'" src="/assets/StamfordTown.webp" alt="">
+        </div>
+        <ul class="nav" id="navi-list">
+            <li class="list-item"><a href="/plantrip.html">Plan trip</a></li>
+            <li class="list-item"><a href="/about.html">About Stamford</a></li>
+            <li class="list-item"><a href="/social.html">Social</a></li>
+            <li class="list-item"><a href="/contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+
+    <!-- Main Body -->
+<div class="main">
+    <div class="img1">
+        <h1 id="title">Hello Stamford</h1>
+    </div>
+    <!-- Weather -->
+    <div class="weather">
+        <h4>Stamford<i id="weather-icon" class="fa-solid fa-cloud-sun"></i>:<h4 id="weather-data"></h4></h4>
+    </div>
+
+    <!-- Flexbox container with cards-->
+    <h1 id="places-h1">Top places to visit</h1>
+    <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item1">
+            <h3>Burgley House</h3>
+            <img class="image" src="/assets/Burghley_House.webp" alt="">
+            <div class="description">
+                <p>Burghley House is a grand sixteenth-century English country house near Stamford, Lincolnshire. It is a leading example of the Elizabethan prodigy house, built and still lived in by the Cecil family. </p>
+                <a href="https://www.burghley.co.uk/plan-your-visit/house-and-gardens"><button class="visit-btn">Visit</button></a>
+            </div>
+        </div>
+
+        <div class="flexbox-item flexbox-item2">
+            <h3>Stamford Shakespeare Company</h3>
+            <img class="image" src="/assets/shakespeare.webp" alt="">
+            <div class="description">
+                <p>One of Europe's finest theatre venues, Tolethorpe Hall is home to the Rutland Open Air Theatre where the resident Stamford Shakespeare Company present an annual season of plays across June, July and August.</p>
+            </div>
+            <a href="https://stamfordshakespeare.co.uk/"><button class="visit-btn">Visit</button></a>
+        </div>
+
+        <div class="flexbox-item flexbox-item3">
+            <h3>Browne's hospital</h3>
+            <img class="image" src="/assets/brownes.webp" alt="">
+            <div class="description">
+                <p>Browne's Hospital is a late medieval almshouse and guild hall. It was founded by William Browne, a very rich wool merchant, with his wife Margaret in 1475 and granted charters by the King in 1485, 1494 and 1610 - in effect it is a Royal Hospital.</p>
+            </div>
+            <a href="https://www.browneshospital.co.uk/visit-and-contact/"><button class="visit-btn">Visit</button></a>
+        </div>
+
+        <div class="flexbox-item4"></div>
+
+    </div>
+
+    <!-- Lifestyle in Stamford section -->
+    
+    <h1 id="lifestyle-h1">Living in Stamford</h1>
+    <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item1">
+            <h2>Police</h2>
+            <img class="icon" src="/assets/police.webp" alt="">
+            <div class="">
+                <p>Find out what it's like to live in Stamford based on police data</p>
+            </div>
+            <a href="/police.html"><button class="open">Open</button></a>
+        </div>
+        <div class="flexbox-item flexbox-item2">
+            <h2>Events</h2>
+            <img class="icon-2" src="/assets/event.webp" alt="">
+            <div>
+                <p>Find events taking place in Stamford</p>
+            </div>
+            <a href="/events.html"><button class="open">Open</button></a>
+        </div>
+        <div class="flexbox-item flexbox-item3">
+            <h2>Air quality and Weather</h2>
+            <img class="icon-2" src="/assets/cloudy.webp" alt="">
+            <div>
+                <p>Find the air quality and weather of Stamford</p>
+            </div>           
+            <a href="/weather.html"><button class="open">Open</button></a>
+        </div>
+        <div class="flexbox-item4"></div>
+    </div>
+
+    <!--Footer-->
+   <footer><p>©Hello Stamford</p></footer>
+        
+</body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
+
+    toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+    })
+</script>
+<script>
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('/service-worker.js');
+    }
+</script>
+</html>

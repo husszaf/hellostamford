@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather API">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/da5e22e76a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Food Hygiene Rating | Hello Stamford</title>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="logo">
+        <a href="/index.html"><img src="/assets/StamfordTown.webp" alt=""></a>
+        </div>
+        <ul class="nav" id="navi-list">
+            <li class="list-item"><a href="/plantrip.html">Plan trip</a></li>
+            <li class="list-item"><a href="/about.html">About Stamford</a></li>
+            <li class="list-item"><a href="/social.html">Social</a></li>
+            <li class="list-item"><a href="/contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+
+
+    <!-- Main Body -->
+<div class="main">
+    <div class="img1">
+        <h1 id="title">Air quality</h1>
+    </div>
+    <!-- Weather -->
+    <div class="weather">
+        <h4>Stamford<i id="weather-icon" class="fa-solid fa-cloud-sun"></i>:<h4 id="weather-data"></h4></h4>
+    </div>
+
+    <!-- Events data -->
+
+    <h1 class="flexbox-container h1-centre">Air Quality Data of Stamford</h1>
+    <div class="flexbox-container">
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>CO</th>
+                    <th>NO2</th>
+                    <th>O3</th>
+                    <th>PM2.5</th>
+                    <th>AQI</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-index-data">
+                <tr>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Footer-->
+   <footer><p>©Hello Stamford</p></footer>
+</body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
+
+    toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+    })
+</script>
+</html>

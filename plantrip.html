@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="location of Stamford on the map">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script src="https://kit.fontawesome.com/da5e22e76a.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <title>Plan a Trip | Hello Stamford</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+        <a href="/index.html"><img src="/assets/StamfordTown.webp" alt=""></a>
+        </div>
+        <ul class="nav" id="navi-list">
+            <li class="list-item"><a href="/plantrip.html">Plan trip</a></li>
+            <li class="list-item"><a href="/about.html">About Stamford</a></li>
+            <li class="list-item"><a href="/social.html">Social</a></li>
+            <li class="list-item"><a href="/contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="menu" id="toggle-button">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+    </nav>
+    <!-- Main Body -->
+<div class="main">
+    <div class="img2">
+        <h1 id="title">Plan a Trip</h1>
+    </div>
+    <!-- Weather -->
+    <div class="weather">
+        <h4>Stamford<i id="weather-icon" class="fa-solid fa-cloud-sun"></i>:<h4 id="weather-data"></h4></h4>
+    </div>
+    <!-- History -->
+    <div class="container">
+        <div class="col">
+            <!-- History Section-->
+            <div class="flexbox-container">
+                <div class="flexbox-item history">
+                    <h3>Location of Stamford</h3>
+                    <!--The div element for the map -->
+                    <div id="map"></div>
+                
+                    <!-- 
+                     The `defer` attribute causes the callback to execute after the full HTML
+                     document has been parsed. For non-blocking uses, avoiding race conditions,
+                     and consistent behavior across browsers, consider loading using Promises
+                     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+                    -->
+                    <script
+                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArH_FnUViZJVNzX_4pyhICCzDcmQgu79w&callback=initMap&v=weekly"
+                      defer
+                    ></script>
+            </div>
+            </div>
+    
+</div>
+<!--Footer-->
+<footer><p>©Hello Stamford</p></footer>
+</body>
+<script>
+    const toggleButton = document.getElementById('toggle-button')
+    const naviList = document.getElementById('navi-list')
+
+    toggleButton.addEventListener('click', () => {
+        naviList.classList.toggle('active');
+    })
+</script>
+</html>
